@@ -1,0 +1,450 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion">
+<body>
+<h1>MediaResourceApiDemo</h1>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Get baseurl</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>getproperty</td>
+        <td>psi.api.base</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td>$baseurl</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>uuid for this test</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>setscriptvalue</td>
+        <td>78C73DCC-EF81-4D49-9314-A4D616C43333</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td>$uuid</td>
+    </tr>
+</table>
+<p>Set up json data</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Initialise json object "currentjson"</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>initialisejsonobject</td>
+        <td>currentjson</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>json set up</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>updatejsonobject</td>
+        <td>currentjson.string.mduc=9999</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>json set up</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>updatejsonobject</td>
+        <td>currentjson.string.mimetype=image/jpeg</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>json set up</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>updatejsonobject</td>
+        <td>currentjson.string.file=/foo/barr.jj</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>json set up</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>updatejsonobject</td>
+        <td>currentjson.string.uuid=$uuid</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>json set up</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>updatejsonobject</td>
+        <td>currentjson.string.checksum=OtherGalaxiesAreOutThere1450</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Do post</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>parameter setup</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>setparameter</td>
+        <td>url=$baseurl + "media"</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>parameter setup</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>setparameter</td>
+        <td>bodyasjson=currentjson</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>parameter setup</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>setparameter</td>
+        <td>contenttype=application/json</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>parameter setup</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>setparameter</td>
+        <td>expectedresponsecode=201</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>parameter setup</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>setparameter</td>
+        <td>action=POST</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Do the POST</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>callmethod</td>
+        <td>httpaction</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p>Now do a GET</p>
+<table border="1" concordion:execute="#result = performAction(#rowswitch,#comment,#bytype,#bytext,#byinnertext,#action,#inputvalue,#wait,#resultname)">
+<tr>
+    <th concordion:set="#rowswitch">Row switch</th>
+    <th concordion:set="#comment">Comment</th>
+    <th concordion:set="#bytype">Locator Type</th>
+    <th concordion:set="#bytext">Locator Text</th>
+    <th concordion:set="#byinnertext">Innertext</th>
+    <th concordion:set="#action">Action</th>
+    <th concordion:set="#inputvalue">Input value</th>
+    <th concordion:set="#wait">Wait For Element (seconds)</th>
+    <th concordion:assertEquals="#result.getOutcome()">Action Result</th>
+    <th concordion:echo="#result.getErrorMessage()">Error Message:</th>
+    <th concordion:echo="#result.getOutput()">Output:</th>
+    <th concordion:set="#resultname">Result Name (name of Script Variable)</th>
+</tr>
+    <tr>
+        <td></td>
+        <td>Initialise json object "getjson"</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>initialisejsonobject</td>
+        <td>getresult</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>parameter setup</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>setparameter</td>
+        <td>url=$baseurl + "media/" + $uuid</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>parameter setup</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>setparameter</td>
+        <td>returnbodytojson=getresult</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>parameter setup</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>setparameter</td>
+        <td>action=GET</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>parameter setup</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>setparameter</td>
+        <td>expectedresponsecode=201</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Do the GET</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>callmethod</td>
+        <td>httpaction</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>check json data</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>checkjsondata</td>
+        <td>getresult.string.mduc=9999</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>check json data</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>checkjsondata</td>
+        <td>getresult.string.mimetype=image/jpeg</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>check json data</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>checkjsondata</td>
+        <td>getresult.string.file=/foo/barr.jj</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>check json data</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>checkjsondata</td>
+        <td>getresult.string.uuid=$uuid</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>check json data</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>checkjsondata</td>
+        <td>getresult.string.checksum=OtherGalaxiesAreOutThere1450</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>check json data</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>checkjsondata</td>
+        <td>getresult.string.checksumx=OtherGalaxiesAreOutThere1449</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>check json length</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>checkjsonlength</td>
+        <td>getresult=5</td>
+        <td></td>
+        <td>PASS</td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+</body>
+</html>
